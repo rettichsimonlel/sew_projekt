@@ -29,5 +29,5 @@ class Email(Base):
     email = sqlalchemy.Column(sqlalchemy.String)
     person_id = sqlalchemy.Column(sqlalchemy.Integer,
                                   sqlalchemy.ForeignKey("person._id"),
-                                  nullable=False)
+                                  nullable=False, unique=True)
 
