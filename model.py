@@ -9,12 +9,12 @@ class Person(Base):
     """Person representation"""
 
     __tablename__ = "person"
-    person_id = sqlalchemy.Column(sqlalchemy.Integer, primary_key=True)
+    _id = sqlalchemy.Column(sqlalchemy.Integer, primary_key=True)
     first_name = sqlalchemy.Column(sqlalchemy.String)
     last_name = sqlalchemy.Column(sqlalchemy.String)
     user_name = sqlalchemy.Column(sqlalchemy.String)
     password = sqlalchemy.Column(sqlalchemy.String)
-    email = relationship("Email", backref="Email")
+    person_email = relationship("Email", backref="person_email")
 
     def __repr__(self):
         """Get representation"""
@@ -25,9 +25,9 @@ class Email(Base):
     """Email representation."""
 
     __tablename__ = "email"
-    email_id = sqlalchemy.Column(sqlalchemy.Integer, primary_key=True)
+    _id = sqlalchemy.Column(sqlalchemy.Integer, primary_key=True)
     email = sqlalchemy.Column(sqlalchemy.String)
     person_id = sqlalchemy.Column(sqlalchemy.Integer,
-                                  sqlalchemy.ForeignKey("person.person_id"),
-                                  nullable=False))
+                                  sqlalchemy.ForeignKey("person._id"),
+                                  nullable=False)
 

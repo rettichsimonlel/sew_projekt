@@ -1,21 +1,24 @@
 import sqlalchemy
 
-from model import Base, Person
+from model import Base, Person, Email
 
 def main():
     """Run Main function."""
     db_connection = database_connections("sqlite:///kek.db")
     session_factory = session_creation(db_connection)
-
-    # add something to the table
     with session_factory() as session:
-        for i in range(2):
-            new_person = Person(first_name="Simon", last_name="Retter",
-                                user_name="pastperfekt", password="kekw",
-                                email="simon.kek@lel.com")
-            session.add(new_person)
+        new_person = Person(first_name="Simon", last_name="Retter",
+                            user_name="pastperfekt", password="kekw")
+        session.add(new_person)
+        session.commit()
+    with session_factory() as session:
+        for tmp_person in session.execute(sqlalchemy.select(Person)):
+            old_person = tmp_person[0]
+            new_email = Email(email="ASDF@wonderland.net",
+                              person_id=old_person._id)
+            session.add(new_email)
             session.commit()
-
+            break
 
 def database_connections(database_url):
     """Connect to database."""
