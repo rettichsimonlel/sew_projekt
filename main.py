@@ -21,12 +21,23 @@ def test_register(session_factory):
         session.expire_on_commit = True
         session.commit()
 
+def test_login(session_factory):
+    _user_name = input("User name: ")
+    _password = input("Password: ")
+    with session_factory() as session:
+        for kek in session.execute(sqlalchemy.select(Person)):
+            for person in kek:
+                if person.user_name == _user_name and person.password == _password:
+                    print("Excepted")
+                else:
+                    print("No")
+                pass
+
 def main():
     """Run Main function."""
     db_connection = database_connections("sqlite:///kek.db")
     session_factory = session_creation(db_connection)
-    test_register(session_factory)
-    test_register(session_factory)
+    test_login(session_factory)
 
 def database_connections(database_url):
     """Connect to database."""
