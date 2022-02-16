@@ -18,6 +18,7 @@ def test_register(session_factory):
         new_email = Email(email=_email,
                         person_id=new_person._id)
         session.add(new_email)
+        session.expire_on_commit = True
         session.commit()
 
 def main():
