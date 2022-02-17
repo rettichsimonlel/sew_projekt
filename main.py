@@ -24,20 +24,32 @@ def test_register(session_factory):
 def test_login(session_factory):
     _user_name = input("User name: ")
     _password = input("Password: ")
+    ye = False
+
     with session_factory() as session:
-        for kek in session.execute(sqlalchemy.select(Person)):
-            for person in kek:
-                if person.user_name == _user_name and person.password == _password:
-                    print("Excepted")
-                else:
-                    print("No")
-                pass
+        table = Base.__subclasses__()
+        for t in table:
+            rows = session.query(t)
+            for r in rows:
+                try:
+                    if r.user_name == _user_name and r.password == _password:
+                        print("Ye")
+                        ye = True
+                except:
+                    pass
+
+    if ye == False:
+        print("No no no")
 
 def main():
     """Run Main function."""
     db_connection = database_connections("sqlite:///kek.db")
     session_factory = session_creation(db_connection)
-    test_login(session_factory)
+    _answer = int(input("1: register; 2: login; ::"))
+    if _answer == 1:
+        test_register(session_factory)
+    elif _answer == 2:
+        test_login(session_factory)
 
 def database_connections(database_url):
     """Connect to database."""

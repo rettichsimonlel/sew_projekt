@@ -12,7 +12,7 @@ class Person(Base):
     _id = sqlalchemy.Column(sqlalchemy.Integer, primary_key=True)
     first_name = sqlalchemy.Column(sqlalchemy.String)
     last_name = sqlalchemy.Column(sqlalchemy.String)
-    user_name = sqlalchemy.Column(sqlalchemy.String)
+    user_name = sqlalchemy.Column(sqlalchemy.String, unique=True)
     password = sqlalchemy.Column(sqlalchemy.String)
     person_email = relationship("Email", backref="person_email")
 

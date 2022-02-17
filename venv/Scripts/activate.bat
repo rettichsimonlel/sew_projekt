@@ -8,7 +8,7 @@ if defined _OLD_CODEPAGE (
     "%SystemRoot%\System32\chcp.com" 65001 > nul
 )
 
-set VIRTUAL_ENV=C:\Users\simon\Documents\Schule\3AHIT\SEW\sew_project\venv
+set VIRTUAL_ENV=C:\Users\retter190085\Desktop\Reposes\sew_projekt\venv
 
 if not defined PROMPT set PROMPT=$P$G
 
