@@ -1,12 +1,37 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}"/>
     <title>Wikiclone</title>
 </head>
 <body>
-    <p>Hello, World!</p>
+    <div class="wrapper">
+        <div class="sidebar">
+            <div class="profile">
+                <!-- Profile Image -->
+                <!-- Profile Title & Description -->
+                <!-- todo: logo -->
+                {% load static %}
+                <img src="{% static 'images/wikilogo.png'}"/>
+            </div>
+            <ul>
+                <li>Kek</li>
+                <li>Kek</li>
+                <li>Kek</li>
+                <li>Kek</li>
+                <li>Kek</li>
+                <li>Kek</li>
+            </ul>
+        </div>
+    </div>
+    <div class="main-content">
+        <h1>The More You Know</h1>
+        <p>Hello, fuuuuuu!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis sint porro rem saepe facere ipsum at harum amet maiores! Deserunt,
+            architecto autem! Mollitia accusantium, dolorem minima vitae perferendis fuga possimus?</p>
+    </div>
 </body>
 </html>
