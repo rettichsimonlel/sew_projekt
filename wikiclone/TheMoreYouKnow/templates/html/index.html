@@ -4,18 +4,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     {% load static %}
-    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}" content-type="text/css">
     <title>Wikiclone</title>
 </head>
 <body>
+    <header>
+        <button style="float: right; padding: 0.5em; margin: 0.5em;">Anmelden</button>
+    </header>
     <div class="wrapper">
         <div class="sidebar">
             <div class="profile">
                 <!-- Profile Image -->
                 <!-- Profile Title & Description -->
                 <!-- todo: logo -->
-                {% load static %}
-                <img src="{% static 'images/wikilogo.png'}"/>
+                <img id="wiki_logo" width="200px" height="200px" src="{% static 'images/wikilogo.png' %}"/>
             </div>
             <ul>
                 <li>Kek</li>
@@ -27,11 +29,13 @@
             </ul>
         </div>
     </div>
-    <div class="main-content">
+    <div class="main-content" style="margin-top: 255px;">
         <h1>The More You Know</h1>
+        <hr width="90%">
         <p>Hello, fuuuuuu!</p>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis sint porro rem saepe facere ipsum at harum amet maiores! Deserunt,
             architecto autem! Mollitia accusantium, dolorem minima vitae perferendis fuga possimus?</p>
+        <p>fuck you</p>
     </div>
 </body>
 </html>
