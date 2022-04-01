@@ -6,6 +6,7 @@
 | --- | --- | --- |
 | 02.03.2022 | laufend | SEW_Projekt |
 | 17.03.2022 | laufend | SEW_Projekt |
+| 31.03.2022 | laufend | SEW_Projekt |
 
 ### 02.03.2022 Django
 #### 7:50 - 9:30
@@ -16,3 +17,8 @@ meiner Django-App verbinden.
 ### 17.03.2022 Django
 #### 7:50 - 9:30
 Templates fuer den HTML teil und Static fuer die Bilder und das CSS.
+
+
+### 17.03.2022 Django
+#### 7:50 - 9:30
+Probleme mit dem CSS loesen und veraenderungen an der CSS.
