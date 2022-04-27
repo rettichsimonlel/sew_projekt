@@ -39,3 +39,8 @@ Website visuell verbessern.
 ### 20.04.2022 Front-End
 #### 7:50 - 9:30
 Änderungen an den Templates.
+
+### 27.04.2022 Back-End
+#### 7:50 - 9:30
+Ein basic Model für die Datenbank erstellen und ein Login username und 
+password search gemacht.
