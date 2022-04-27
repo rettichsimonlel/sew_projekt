@@ -32,13 +32,14 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'TheMoreYouKnow.apps.ThemoreyouknowConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'TheMoreYouKnow',
+    #'TheMoreYouKnow',
 ]
 
 MIDDLEWARE = [
