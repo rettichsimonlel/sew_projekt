@@ -12,7 +12,7 @@ body {
 }
 
 /* nav bar */
-.sidebar {
+#sidebar {
     /* background: rgb(5, 68, 104); */
     position: fixed;
     top: 50px;
@@ -24,7 +24,7 @@ body {
     text-align: center;
 }
 
-.sidebar .profile {
+#sidebar .profile {
     margin-bottom: 30px;
     text-align: center;
 }
@@ -45,6 +45,5 @@ body {
 /* Button */
 #anmeldung {
     float: right;
-    padding: 0.5em;
-    margin-right: 0.5em;
+    margin: 1em;
 }

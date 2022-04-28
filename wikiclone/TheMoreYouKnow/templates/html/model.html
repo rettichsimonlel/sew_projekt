@@ -3,16 +3,20 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     {% load static %}
-    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}" content-type="text/css">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/model.css' %}" content-type="text/css">
     <title>Wikiclone</title>
 </head>
 <body>
+
     <header>
         <br>
-        <button onclick="window.location.href = 'login.html';" id="anmeldung">Anmelden</button>
+        <button type="button" class="btn btn-primary btn-lg" onclick="window.location.href = 'login.html';" id="anmeldung">Anmelden</button>
     </header>
-    <div class="sidebar">
+
+    <div id="sidebar">
         <div class="profile">
             <img id="wiki_logo" src="{% static 'images/wikilogo.png' %}"/>
         </div>
@@ -25,6 +29,7 @@
             <li>Kek</li>
         </ul>
     </div>
+
     <div class="main-content">
         <h1>The More You Know</h1>
         <hr width="90%">
@@ -33,5 +38,6 @@
             architecto autem! Mollitia accusantium, dolorem minima vitae perferendis fuga possimus?</p>
         <p>fuck you</p>
     </div>
+
 </body>
 </html>
