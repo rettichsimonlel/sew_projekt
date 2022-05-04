@@ -12,6 +12,7 @@
 | 20.04.2022 | laufend | SEW_Projekt |
 | 27.04.2022 | laufend | SEW_Projekt |
 | 28.04.2022 | laufend | SEW_Projekt |
+| 04.05.2022 | laufend | SEW_Projekt |
 
 ### 02.03.2022 Django
 #### 7:50 - 9:30
@@ -50,3 +51,8 @@ password search gemacht.
 ### 28.04.2022 Back-End
 #### 14:05 - 17:35
 Mit Bootstrap versuch meine Webseite schön zu machen.
+
+
+### 04.05.2022 Front-End
+#### 7:50 - 9:30
+Adding a register option and returning something when you try to register

@@ -6,4 +6,6 @@ urlpatterns = [
     path('', views.index, name='index'),
     path('login.html/', views.login, name='login'),
     path('login.html/send/', views.search, name='search'),
+    path('login.html/register.html/', views.register, name='search'),
+    path('login.html/register.html/send/', views.data_input, name='search'),
 ]

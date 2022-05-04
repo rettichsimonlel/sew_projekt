@@ -10,6 +10,9 @@ def index(request):
 def login(request):
     return render(request, 'html/login.html')
 
+def register(request):
+    return render(request, 'html/register.html')
+
 # https://stackoverflow.com/questions/25028895/very-simple-user-input-in-django
 # TODO put other .html files instead of HttpResponse
 def search(request):
@@ -29,3 +32,8 @@ def search(request):
             return HttpResponse(f"no such user ({username_id})")  
     else:
         return render(request, 'model.html')
+
+# adding a new user to the database
+def data_input(request):
+    # TODO basically everything
+    return HttpResponse("it should be doing shit")
