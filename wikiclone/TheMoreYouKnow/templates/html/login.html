@@ -10,7 +10,14 @@
     <title>Login</title>
 </head>
 <body>
+    
+    <header>
+        <br>
+        <button type="button" class="btn btn-primary btn-lg" onclick="window.location.href = '#';" id="register">Register</button>
+    </header>
+
     <div id="main-content">
+
         <h1>This is the login page</h1>
         <form method="POST" action="send/">
             {% csrf_token %}

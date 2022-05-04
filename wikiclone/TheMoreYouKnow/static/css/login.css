@@ -1,7 +1,14 @@
 #main-content {
     text-align: center;
+    padding: 100px;
 }
 
 #submit {
+    margin: 1em;
+}
+
+/* Button */
+#register {
+    float: right;
     margin: 1em;
 }
