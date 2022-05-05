@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from .models import User
 from django.http import HttpResponse
 from django.contrib.auth import authenticate
@@ -21,13 +21,12 @@ def search(request):
         print("in request.method == 'POST'")
         username_id = request.POST.get('username', None)
         password_id = request.POST.get('password', None)
-        print(username_id)
-        print(password_id)
         user = authenticate(request, username=username_id, password=password_id)
         if user is not None:
-            return HttpResponse(f"You are logged in mr. {username_id}")
+            print(f"You are logged in mr. {username_id}")
+            return  redirect('/') # for lack of a better idea
+            # return HttpResponse(f"You are logged in mr. {username_id}")
         else:
-            print("Nonono")
             return HttpResponse("User not found")
 
 #        try:
@@ -46,5 +45,6 @@ def search(request):
 
 # adding a new user to the database
 def data_input(request):
-    # TODO basically everything
-    return HttpResponse("it should be doing shit")
+    # TODO register
+    return redirect('/')
+    #return HttpResponse("it should be doing shit")
