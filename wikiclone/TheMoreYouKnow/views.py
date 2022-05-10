@@ -29,20 +29,6 @@ def search(request):
         else:
             return HttpResponse("User not found")
 
-#        try:
-#            user = User.objects.get(username = username_id) # here the problem
-#            print(user)
-#            try:
-#                pwd = User.objects.get(password = password_id)
-#            except User.DoesNotExist:
-#                return HttpResponse(f"wrong password ({password_id})")
-#            html = ("<H1>%s</H1>", user)
-#            return HttpResponse(html)
-#        except User.DoesNotExist:
-#            return HttpResponse(f"no such user ({username_id})")  
-#    else:
-#        return render(request, 'model.html')
-
 # adding a new user to the database
 def data_input(request):
     # TODO register
