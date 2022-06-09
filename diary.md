@@ -56,3 +56,7 @@ Mit Bootstrap versuch meine Webseite schön zu machen.
 ### 04.05.2022 Front-End
 #### 7:50 - 9:30
 Adding a register option and returning something when you try to register
+
+### 04.05.2022 -> 09.06.2022 Backend
+Getting the login and registration to work how it is suppost to work.
+(This took way to long)
