@@ -11,7 +11,7 @@ class LoginTest(TestCase):
         new_user.set_password("1234")
         new_user.save()
     
-    def test_login(self):
+    def test_login_registration(self):
         request = self.factory.get('/customer/details')
         yes = True
         try:
