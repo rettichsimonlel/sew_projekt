@@ -60,3 +60,10 @@ Adding a register option and returning something when you try to register
 ### 04.05.2022 -> 09.06.2022 Backend
 Getting the login and registration to work how it is suppost to work.
 (This took way to long)
+
+### 15.06.2022
+#### 7:50 -> 9:30
+improving login and registration
+adding test for login and registration
+adding model for future content
+displaying content (in work)

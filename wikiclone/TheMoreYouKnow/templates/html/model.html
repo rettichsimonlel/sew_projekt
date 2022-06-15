@@ -32,12 +32,11 @@
     </div>
 
     <div class="main-content">
-        <h1>The More You Know</h1>
-        <hr width="90%">
-        <p>Hello, fuuuuuu!</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis sint porro rem saepe facere ipsum at harum amet maiores! Deserunt,
-            architecto autem! Mollitia accusantium, dolorem minima vitae perferendis fuga possimus?</p>
-        <p>fuck you</p>
+        {% for thing in contents %}
+            <h1>{{ thing.item.title }}</h1>
+            <hr width="90%">
+            <p>{{ thing.item.body }}</p>
+        {% endfor %}
     </div>
 
 </body>

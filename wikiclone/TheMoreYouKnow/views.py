@@ -2,11 +2,23 @@ from django.shortcuts import render, redirect
 from django.contrib.auth.models import User
 from django.http import HttpResponse
 from django.contrib.auth import authenticate, login
+from .models import Content
+from django.template import loader
 
 # Create your views here.
 
 def index_view(request):
-    return render(request, 'html/model.html')
+    contents = Content.objects.all()
+    template = loader.get_template('html/model.html')
+    pairs = []
+    for i, item in enumerate(contents):
+        b = i%2 == 0
+        pairs.append({"item": item, "left": b})
+
+    context = {
+        'contents': pairs,
+    }
+    return HttpResponse(template.render(context, request))
 
 def login_view(request):
     return render(request, 'html/login.html')
