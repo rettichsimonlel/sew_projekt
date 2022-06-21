@@ -4,3 +4,4 @@ from django.db import models
 class Content(models.Model):
     title = models.CharField(max_length=30)
     body = models.CharField(max_length=10000)
+    user_name = models.CharField(max_length=100)

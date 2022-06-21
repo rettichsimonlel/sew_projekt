@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creating</title>
+</head>
+<body>
+   <div id="main-content">
+        <h1>Post</h1>
+        <form method="POST" action="send/">
+            {% csrf_token %}
+            <p>Title: </p>
+            <input type="text" name="title">
+            <p>Body: </p>
+            <input type="text" name="body">
+            <br> 
+            <button id="submit" class="btn btn-primary btn-lg" type="submit">Enter</button>
+        </form>
+    </div>
+</body>
+</html>

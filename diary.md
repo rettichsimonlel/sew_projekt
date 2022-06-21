@@ -67,3 +67,7 @@ improving login and registration
 adding test for login and registration
 adding model for future content
 displaying content (in work)
+
+### 21.06.2022
+#### 22:00 -> 22:51
+Making it possible for the user to add a post

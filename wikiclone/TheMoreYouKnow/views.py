@@ -26,6 +26,26 @@ def login_view(request):
 def register_view(request):
     return render(request, 'html/register.html')
 
+def creating_view(request):
+    return render(request, 'html/add.html')
+
+def creating_send_view(request):
+    if request.method == 'POST':
+        m_title = request.POST.get('title', None)
+        m_body = request.POST.get('body', None)
+        m_user_name = str(request.user)
+
+        new_content = Content.objects.create(title=m_title, body=m_body, user_name=m_user_name)
+        new_content.save()
+
+        #new_content = Content()
+        #new_content.title = title
+        #new_content.body = body
+        #new_content.user_name = user_name
+        #new_content.save()
+        print(request.user)
+    return redirect('/')
+
 # https://stackoverflow.com/questions/25028895/very-simple-user-input-in-django
 # TODO put other .html files instead of HttpResponse
 def search_view(request):
