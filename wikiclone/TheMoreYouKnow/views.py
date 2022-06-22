@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth.models import User
 from django.http import HttpResponse
-from django.contrib.auth import authenticate, login
+from django.contrib.auth import authenticate, login, logout
 from .models import Content
 from django.template import loader
 
@@ -75,3 +75,7 @@ def data_input_view(request):
         print("Fail")
     return redirect('/')
     #return HttpResponse("it should be doing shit")
+
+def logout_view(request):
+    logout(request)
+    return redirect('/')
